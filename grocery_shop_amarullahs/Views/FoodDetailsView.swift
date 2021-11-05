@@ -14,14 +14,15 @@ struct FoodDetailsView: View {
         GeometryReader { geo in
             ScrollView(.vertical, showsIndicators: false) {
                 
+                // Image
+                Image(food.image)
+                    .resizable()
+                    .frame(height: geo.size.height/1.6, alignment: .center)
+                    .cornerRadius(32)
+                    .ignoresSafeArea(.all)
+                
+                
                 VStack(alignment: .leading, spacing: 10 ) {
-                    
-                    // Image
-                    Image(food.image)
-                        .resizable()
-                        .frame(height: geo.size.height/2, alignment: .center)
-                        .cornerRadius(32)
-                        .ignoresSafeArea()
                     
                     // name
                     Text(food.name)
@@ -105,15 +106,16 @@ struct FoodDetailsView: View {
                             .frame(maxWidth: .infinity)
                             .background(
                                 RoundedRectangle(cornerRadius: 20)
-                                    .fill(Color.red.opacity(0.7))
+                                    .fill(Color.red.opacity(0.8))
                             )
                     }
 
                     
                 }
+                .padding()
                 
             }
-            .padding()
+            .ignoresSafeArea(.all)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(
                 leading:
@@ -126,8 +128,9 @@ struct FoodDetailsView: View {
                         .frame(width: 16, height: 20, alignment: .center)
                         .padding(10)
                         .overlay(
-                            Circle().stroke(Color.black, lineWidth: 1)
+                            Circle().stroke(Color.red, lineWidth: 1)
                         )
+                    .foregroundColor(.red.opacity(0.8))
             )
             
         }
