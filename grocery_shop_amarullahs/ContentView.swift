@@ -8,15 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var searchText: String = ""
+    
     var body: some View {
         NavigationView {
             ScrollView {
                 
+                Text("Lest search your fruits")
+                    .font(.title)
+                    .bold()
                 
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                    TextField("search your fruits", text: $searchText)
+                }
+                .padding()
+                .foregroundColor(.gray)
+                .background(
+                    Color.gray.opacity(0.3)
+                )
+                .cornerRadius(16)
+                .padding(.vertical)
                 
                 
                 
             }
+            .padding()
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
                 leading:
