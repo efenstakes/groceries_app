@@ -13,6 +13,8 @@ struct FoodDetailsView: View {
     // for navigation
     @Environment(\.presentationMode) var presentationMode
     
+    @State var quantity: Int = 1
+    
     
     var body: some View {
         GeometryReader { geo in
@@ -54,28 +56,31 @@ struct FoodDetailsView: View {
                         HStack {
                             
                             Button(action: {
-                                
+                                if quantity > 1 {
+                                    quantity -= 1
+                                }
                             }) {
                                 Image(systemName: "minus")
                                     .resizable()
                                     .frame(width: 20, height: 2, alignment: .center)
+                                    .padding()
                             }
                             
-                            Text("1")
+                            Text("\(quantity)")
                                 .font(.body)
                                 .bold()
-                                .padding(.horizontal, 20)
+                                .padding(.horizontal, 30)
                             
                             Button(action: {
-                                
+                                quantity += 1
                             }) {
                                 Image(systemName: "plus")
                                     .resizable()
                                     .frame(width: 20, height: 20, alignment: .center)
                             }
+                            .padding()
                             
                         }
-                        .padding()
                         .background(Color.gray.opacity(0.2))
                         .cornerRadius(20)
                         .foregroundColor(.black)
@@ -83,7 +88,7 @@ struct FoodDetailsView: View {
                         Spacer()
                         
                         // price
-                        Text("$\(food.price, specifier: "%.2f")")
+                        Text("$\((food.price * Double(quantity)), specifier: "%.2f")")
                             .font(.title)
                             .fontWeight(.semibold)
                         
