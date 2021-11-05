@@ -40,7 +40,11 @@ struct ContentView: View {
                 LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
                     ForEach(foods) { food in
                         
-                        FoodCardView(food: food)
+                        NavigationLink(
+                            destination: FoodDetailsView(food: food)
+                    ) {
+                            FoodCardView(food: food)
+                        }
                         
                     }
                 }
