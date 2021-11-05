@@ -76,7 +76,7 @@ struct FoodDetailsView: View {
                             
                         }
                         .padding()
-                        .background(Color.gray.opacity(0.6))
+                        .background(Color.gray.opacity(0.2))
                         .cornerRadius(20)
                         .foregroundColor(.black)
                         
@@ -85,7 +85,7 @@ struct FoodDetailsView: View {
                         // price
                         Text("$\(food.price, specifier: "%.2f")")
                             .font(.title)
-                            .bold()
+                            .fontWeight(.semibold)
                         
                     }
                     .padding(.vertical)
