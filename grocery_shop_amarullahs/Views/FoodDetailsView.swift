@@ -127,7 +127,7 @@ struct FoodDetailsView: View {
                         .frame(width: 10, height: 20, alignment: .center)
                         .padding(18)
                         .background(
-                            Circle().fill(Color.white.opacity(0.6))
+                            Circle().fill(Color.black.opacity(0.3))
                         )
                         .onTapGesture {
                             presentationMode.wrappedValue.dismiss()
