@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE02CAB727356AE2007F5D4A /* food.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02CAB627356AE2007F5D4A /* food.swift */; };
 		CE02CABB27357153007F5D4A /* FoodCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02CABA27357153007F5D4A /* FoodCardView.swift */; };
+		CE02CABD27358009007F5D4A /* FoodDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02CABC27358009007F5D4A /* FoodDetailsView.swift */; };
 		CEFE308C273569D50066F7EE /* grocery_shop_amarullahsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE308B273569D50066F7EE /* grocery_shop_amarullahsApp.swift */; };
 		CEFE308E273569D50066F7EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE308D273569D50066F7EE /* ContentView.swift */; };
 		CEFE3090273569DB0066F7EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFE308F273569DB0066F7EE /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		CE02CAB627356AE2007F5D4A /* food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = food.swift; sourceTree = "<group>"; };
 		CE02CABA27357153007F5D4A /* FoodCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardView.swift; sourceTree = "<group>"; };
+		CE02CABC27358009007F5D4A /* FoodDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsView.swift; sourceTree = "<group>"; };
 		CEFE3088273569D50066F7EE /* grocery_shop_amarullahs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grocery_shop_amarullahs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFE308B273569D50066F7EE /* grocery_shop_amarullahsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grocery_shop_amarullahsApp.swift; sourceTree = "<group>"; };
 		CEFE308D273569D50066F7EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		CE02CAB92735713C007F5D4A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE02CABC27358009007F5D4A /* FoodDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			files = (
 				CEFE308E273569D50066F7EE /* ContentView.swift in Sources */,
 				CEFE308C273569D50066F7EE /* grocery_shop_amarullahsApp.swift in Sources */,
+				CE02CABD27358009007F5D4A /* FoodDetailsView.swift in Sources */,
 				CE02CABB27357153007F5D4A /* FoodCardView.swift in Sources */,
 				CE02CAB727356AE2007F5D4A /* food.swift in Sources */,
 			);
