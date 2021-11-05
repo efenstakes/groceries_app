@@ -38,7 +38,13 @@ struct ContentView: View {
                 
                 // list of items
                 LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
-                    ForEach(foods) { food in
+                    ForEach(
+                    
+                        searchText.isEmpty
+                            ? foods
+                            : foods.filter{ $0.name.starts(with: searchText) }
+                        
+                    ) { food in
                         
                         NavigationLink(
                             destination: FoodDetailsView(food: food)
