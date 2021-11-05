@@ -10,6 +10,10 @@ import SwiftUI
 struct FoodDetailsView: View {
     let food: Food
     
+    // for navigation
+    @Environment(\.presentationMode) var presentationMode
+    
+    
     var body: some View {
         GeometryReader { geo in
             ScrollView(.vertical, showsIndicators: false) {
@@ -26,8 +30,7 @@ struct FoodDetailsView: View {
                     
                     // name
                     Text(food.name)
-                        .font(.largeTitle)
-                        .bold()
+                        .font(.system(size: 48, weight: .semibold, design: .rounded))
                         .padding(.top)
                     
                     
@@ -121,7 +124,14 @@ struct FoodDetailsView: View {
                 leading:
                     Image(systemName: "chevron.left")
                         .resizable()
-                        .frame(width: 10, height: 20, alignment: .center),
+                        .frame(width: 10, height: 20, alignment: .center)
+                        .padding(18)
+                        .background(
+                            Circle().fill(Color.white.opacity(0.6))
+                        )
+                        .onTapGesture {
+                            presentationMode.wrappedValue.dismiss()
+                        },
                 trailing:
                     Image(systemName: "bag")
                         .resizable()
