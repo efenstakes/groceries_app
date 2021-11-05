@@ -10,9 +10,14 @@ import SwiftUI
 struct ContentView: View {
     @State private var searchText: String = ""
     
+    let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+    ]
+    
     var body: some View {
         NavigationView {
-            ScrollView {
+            ScrollView(.vertical, showsIndicators: false) {
                 
                 Text("Lest search your fruits")
                     .font(.title)
@@ -29,6 +34,16 @@ struct ContentView: View {
                 )
                 .cornerRadius(16)
                 .padding(.vertical)
+                
+                
+                // list of items
+                LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
+                    ForEach(foods) { food in
+                        
+                        FoodCardView(food: food)
+                        
+                    }
+                }
                 
                 
                 
