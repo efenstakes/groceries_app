@@ -17,7 +17,9 @@ struct FoodCardView: View {
             // image
             Image(food.image)
                 .resizable()
+                .renderingMode(.original)
                 .scaledToFill()
+                
 
             
             VStack {
@@ -26,6 +28,7 @@ struct FoodCardView: View {
                     Spacer()
                     
                     Image(systemName: "cart")
+                        .renderingMode(.original)
                         .frame(width: 10, height: 10, alignment: .center)
                         .foregroundColor(.white)
                         .padding(20)
@@ -72,6 +75,7 @@ struct FoodCardView: View {
         .frame(maxWidth: 180, alignment: .leading)
         .frame(height: 300, alignment: .leading)
         .cornerRadius(32)
+        .foregroundColor(.black)
         
     }
 }
