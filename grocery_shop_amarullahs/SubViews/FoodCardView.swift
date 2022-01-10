@@ -73,7 +73,11 @@ struct FoodCardView: View {
         }
         .clipped()
         .frame(maxWidth: 180, alignment: .leading)
-        .frame(height: 300, alignment: .leading)
+        .frame(
+            width: (UIScreen.main.bounds.width/2)-20,
+            height: 300,
+            alignment: .leading
+        )
         .cornerRadius(32)
         .foregroundColor(.black)
         
